@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { cleanup, render } from '@testing-library/react';
-import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 import 'regenerator-runtime/runtime';
 import 'jest-axe/extend-expect';
@@ -27,18 +26,18 @@ describe('Spinner', () => {
   });
 
   test('renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Spinner />
         <Spinner id="test id" name="test name" />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('size renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Spinner size="xsmall" />
         <Spinner size="small" />
@@ -47,12 +46,12 @@ describe('Spinner', () => {
         <Spinner size="xlarge" />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('size renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Spinner color="graph-0" />
         <Spinner color="graph-1" />
@@ -61,12 +60,12 @@ describe('Spinner', () => {
         <Spinner color="graph-4" />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('round renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Spinner round={false} />
         <Spinner round="small" />
@@ -74,12 +73,12 @@ describe('Spinner', () => {
         <Spinner round="large" />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('border renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Spinner
           border={[
@@ -120,7 +119,7 @@ describe('Spinner', () => {
         />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
@@ -140,12 +139,12 @@ describe('Spinner', () => {
       },
     };
 
-    const component = renderer.create(
+    const { container } = render(
       <Grommet theme={theme}>
         <Spinner />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
@@ -163,12 +162,12 @@ describe('Spinner', () => {
       },
     };
 
-    const component = renderer.create(
+    const { container } = render(
       <Grommet theme={theme}>
         <Spinner />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 });

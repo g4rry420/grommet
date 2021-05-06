@@ -66,13 +66,11 @@ exports[`Anchor disabled renders 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <a
-    className="c1"
-    disabled={true}
-    onBlur={[Function]}
-    onFocus={[Function]}
+    class="c1"
+    disabled=""
   />
 </div>
 `;
@@ -189,27 +187,20 @@ exports[`Anchor icon label renders 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <a
-    className="c1"
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
+    class="c1"
   >
     <span
-      className="c2"
-      style={
-        Object {
-          "display": "inline-flex",
-        }
-      }
+      class="c2"
+      style="display: inline-flex;"
     >
       <svg
         color="#7D4CDB"
       />
       <span
-        className="c3"
+        class="c3"
       />
       Test
     </span>
@@ -245,13 +236,11 @@ exports[`Anchor primary renders 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <a
-    className="c1"
+    class="c1"
     href="#"
-    onBlur={[Function]}
-    onFocus={[Function]}
   >
     Test
   </a>
@@ -286,12 +275,10 @@ exports[`Anchor renders 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <a
-    className="c1"
-    onBlur={[Function]}
-    onFocus={[Function]}
+    class="c1"
   />
 </div>
 `;
@@ -324,13 +311,11 @@ exports[`Anchor renders tag 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <span
-    className="c1"
+    class="c1"
     href="#"
-    onBlur={[Function]}
-    onFocus={[Function]}
   >
     Test
   </span>
@@ -365,13 +350,11 @@ exports[`Anchor renders with children 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <a
-    className="c1"
+    class="c1"
     href="#"
-    onBlur={[Function]}
-    onFocus={[Function]}
   >
     children
   </a>
@@ -434,25 +417,18 @@ exports[`Anchor reverse icon label renders 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <a
-    className="c1"
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
+    class="c1"
   >
     <span
-      className="c2"
-      style={
-        Object {
-          "display": "inline-flex",
-        }
-      }
+      class="c2"
+      style="display: inline-flex;"
     >
       Test
       <span
-        className="c3"
+        class="c3"
       />
       <svg
         color="#7D4CDB"
@@ -610,43 +586,25 @@ exports[`Anchor size renders 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <a
-    className="c1"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    size="xsmall"
+    class="c1"
   />
   <a
-    className="c2"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    size="small"
+    class="c2"
   />
   <a
-    className="c3"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    size="medium"
+    class="c3"
   />
   <a
-    className="c4"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    size="large"
+    class="c4"
   />
   <a
-    className="c5"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    size="xlarge"
+    class="c5"
   />
   <a
-    className="c6"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    size="xxlarge"
+    class="c6"
   />
 </div>
 `;
@@ -792,29 +750,23 @@ exports[`Anchor weight renders 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <a
-    className="c1"
+    class="c1"
     href="#"
-    onBlur={[Function]}
-    onFocus={[Function]}
   >
     Normal
   </a>
   <a
-    className="c2"
+    class="c2"
     href="#"
-    onBlur={[Function]}
-    onFocus={[Function]}
   >
     Bold
   </a>
   <a
-    className="c3"
+    class="c3"
     href="#"
-    onBlur={[Function]}
-    onFocus={[Function]}
   >
     Bold
   </a>

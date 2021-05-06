@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 import { cleanup, render, fireEvent, act } from '@testing-library/react';
 
@@ -11,7 +10,7 @@ describe('Carousel', () => {
   afterEach(cleanup);
 
   test('basic', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Carousel>
           <Image src="//v2.grommet.io/assets/IMG_4245.jpg" />
@@ -19,12 +18,12 @@ describe('Carousel', () => {
         </Carousel>
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('basic with `initialChild: 1`', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Carousel initialChild={1}>
           <Image src="//v2.grommet.io/assets/IMG_4245.jpg" />
@@ -32,7 +31,7 @@ describe('Carousel', () => {
         </Carousel>
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 

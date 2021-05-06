@@ -27,22 +27,22 @@ describe('Anchor', () => {
   });
 
   test('renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Anchor />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('renders with children', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Anchor href="#">children</Anchor>
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
@@ -87,12 +87,12 @@ describe('Anchor', () => {
   });
 
   test('primary renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Anchor href="#" primary label="Test" />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
@@ -121,37 +121,37 @@ describe('Anchor', () => {
   });
 
   test('disabled renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Anchor disabled />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('icon label renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Anchor icon={<svg />} label="Test" onClick={() => {}} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('reverse icon label renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Anchor reverse icon={<svg />} label="Test" onClick={() => {}} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('size renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Anchor size="xsmall" />
         <Anchor size="small" />
@@ -161,7 +161,7 @@ describe('Anchor', () => {
         <Anchor size="xxlarge" />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
@@ -180,24 +180,24 @@ describe('Anchor', () => {
   });
 
   test('renders tag', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Anchor href="#" label="Test" as="span" />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('weight renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Anchor href="#" label="Normal" weight="normal" />
         <Anchor href="#" label="Bold" weight="bold" />
         <Anchor href="#" label="Bold" weight={500} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 });

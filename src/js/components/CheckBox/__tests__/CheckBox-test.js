@@ -1,6 +1,5 @@
 import React from 'react';
 import { cleanup, render, fireEvent } from '@testing-library/react';
-import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 import { axe } from 'jest-axe';
 import 'jest-axe/extend-expect';
@@ -35,99 +34,99 @@ describe('CheckBox', () => {
   });
 
   test('renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <CheckBox />
         <CheckBox id="test id" name="test name" />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('label renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <CheckBox label="test label" />
         <CheckBox label={<div>test label</div>} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('checked renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <CheckBox checked />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('defaultChecked', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <CheckBox defaultChecked />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('disabled renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <CheckBox disabled />
         <CheckBox disabled checked />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('reverse renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <CheckBox reverse label="test label" />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('toggle renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <CheckBox toggle />
         <CheckBox toggle checked />
         <CheckBox toggle label="test label" />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('reverse toggle fill', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <CheckBox label="test label" reverse fill toggle />
         <CheckBox fill toggle label="test label" />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('indeterminate renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <CheckBox indeterminate />
         <CheckBox indeterminate label="test label" />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 

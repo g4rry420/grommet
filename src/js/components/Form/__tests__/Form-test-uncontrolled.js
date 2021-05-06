@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 import 'jest-styled-components';
 import 'jest-axe/extend-expect';
@@ -105,24 +104,24 @@ describe('Form uncontrolled', () => {
   afterEach(cleanup);
 
   test('empty', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Form />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('with field', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Form>
           <FormField name="test" />
         </Form>
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 

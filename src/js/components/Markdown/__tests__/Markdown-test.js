@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import 'jest-styled-components';
 
 import { Grommet } from '../../Grommet';
@@ -29,11 +29,11 @@ Markdown | Less | Pretty
 `;
 
 test('Markdown renders', () => {
-  const component = renderer.create(
+  const { container } = render(
     <Grommet>
       <Markdown>{CONTENT}</Markdown>
     </Grommet>,
   );
-  const tree = component.toJSON();
+  const tree = container.firstChild;
   expect(tree).toMatchSnapshot();
 });

@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 import 'jest-axe/extend-expect';
 import 'regenerator-runtime/runtime';
@@ -27,50 +26,50 @@ test('image should have no violations', async () => {
 });
 
 test('Image renders', () => {
-  const component = renderer.create(
+  const { container } = render(
     <Grommet>
       <Image src={SRC} />
     </Grommet>,
   );
-  const tree = component.toJSON();
+  const tree = container.firstChild;
   expect(tree).toMatchSnapshot();
 });
 
 test('Image renders with aria-label', () => {
-  const component = renderer.create(
+  const { container } = render(
     <Grommet>
       <Image a11yTitle="aria-label-text" src={SRC} />
     </Grommet>,
   );
-  const tree = component.toJSON();
+  const tree = container.firstChild;
   expect(tree).toMatchSnapshot();
 });
 
 test('Image fit renders', () => {
-  const component = renderer.create(
+  const { container } = render(
     <Grommet>
       <Image fit="cover" src={SRC} />
       <Image fit="contain" src={SRC} />
     </Grommet>,
   );
-  const tree = component.toJSON();
+  const tree = container.firstChild;
   expect(tree).toMatchSnapshot();
 });
 
 opacityTypes.forEach(opacity => {
   test(`Image opacity of ${opacity} renders`, () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Image opacity={opacity} src={SRC} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 });
 
 test('Image fillProp renders', () => {
-  const component = renderer.create(
+  const { container } = render(
     <Grommet>
       <Image fill src={SRC} />
       <Image fill={false} src={SRC} />
@@ -78,7 +77,7 @@ test('Image fillProp renders', () => {
       <Image fill="vertical" src={SRC} />
     </Grommet>,
   );
-  const tree = component.toJSON();
+  const tree = container.firstChild;
   expect(tree).toMatchSnapshot();
 });
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 import 'jest-axe/extend-expect';
 import 'regenerator-runtime/runtime';
@@ -24,27 +23,27 @@ describe('CheckBoxGroup', () => {
   });
 
   test('options renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <CheckBoxGroup options={['First', 'Second']} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('value renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <CheckBoxGroup value={['First']} options={['First', 'Second']} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('initial value renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <CheckBoxGroup
           value={['Wuhan', 'Jerusalem']}
@@ -56,19 +55,19 @@ describe('CheckBoxGroup', () => {
         />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('disabled renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <CheckBoxGroup disabled options={['First', 'Second']} />
         <CheckBoxGroup options={[{ label: 'First', disabled: true }]} />
         <CheckBoxGroup options={[{ label: 'First', disabled: true }]} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 

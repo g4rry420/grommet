@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 import 'jest-axe/extend-expect';
 import 'regenerator-runtime/runtime';
@@ -26,40 +25,40 @@ describe('RadioButtonGroup', () => {
   });
 
   test('string options', () => {
-    const component = renderer.create(
+    const { container, unmount } = render(
       <Grommet>
         <RadioButtonGroup name="test" options={['one', 'two']} value="one" />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
-    component.unmount();
+    unmount();
   });
 
   test('number options', () => {
-    const component = renderer.create(
+    const { container, unmount } = render(
       <Grommet>
         <RadioButtonGroup name="test" options={[1, 2]} value={1} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
-    component.unmount();
+    unmount();
   });
 
   test('boolean options', () => {
-    const component = renderer.create(
+    const { container, unmount } = render(
       <Grommet>
         <RadioButtonGroup name="test" options={[true, false]} value />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
-    component.unmount();
+    unmount();
   });
 
   test('object options just value', () => {
-    const component = renderer.create(
+    const { container, unmount } = render(
       <Grommet>
         <RadioButtonGroup
           name="test"
@@ -68,13 +67,13 @@ describe('RadioButtonGroup', () => {
         />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
-    component.unmount();
+    unmount();
   });
 
   test('object options', () => {
-    const component = renderer.create(
+    const { container, unmount } = render(
       <Grommet>
         <RadioButtonGroup
           name="test"
@@ -85,13 +84,13 @@ describe('RadioButtonGroup', () => {
         />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
-    component.unmount();
+    unmount();
   });
 
   test('object options disabled', () => {
-    const component = renderer.create(
+    const { container, unmount } = render(
       <Grommet>
         <RadioButtonGroup
           name="test"
@@ -99,9 +98,9 @@ describe('RadioButtonGroup', () => {
         />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
-    component.unmount();
+    unmount();
   });
 
   test('defaultValue', () => {
@@ -121,20 +120,20 @@ describe('RadioButtonGroup', () => {
     const child = ({ checked }) => (
       <Box pad="small" background={checked ? 'accent-1' : 'control'} />
     );
-    const component = renderer.create(
+    const { container, unmount } = render(
       <Grommet>
         <RadioButtonGroup name="test" options={['one', 'two']} value="one">
           {child}
         </RadioButtonGroup>
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
-    component.unmount();
+    unmount();
   });
 
   test('adding additional props', () => {
-    const component = renderer.create(
+    const { container, unmount } = render(
       <Grommet>
         <RadioButtonGroup
           name="test"
@@ -153,9 +152,9 @@ describe('RadioButtonGroup', () => {
         />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
-    component.unmount();
+    unmount();
   });
 
   test('onChange fires with event when passed from props', () => {

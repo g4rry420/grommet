@@ -1,6 +1,5 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-
 import 'jest-styled-components';
 import 'jest-axe/extend-expect';
 import 'regenerator-runtime/runtime';
@@ -43,27 +42,27 @@ describe('Button', () => {
   });
 
   test('basic', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Button label="Test" onClick={() => {}} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('children function', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Button onClick={() => {}}>{() => <Text>Test</Text>}</Button>
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('children function with disabled prop', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Button onClick={() => {}} disabled>
           {({ disabled }) => <Text>{disabled ? 'Disabled' : 'Test'}</Text>}
@@ -73,7 +72,7 @@ describe('Button', () => {
         </Button>
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
@@ -116,17 +115,17 @@ describe('Button', () => {
   });
 
   test('primary', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Button primary label="Test" onClick={() => {}} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('color', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Button color="accent-1" label="Test" onClick={() => {}} />
         <Button color="accent-1" primary label="Test" onClick={() => {}} />
@@ -134,7 +133,7 @@ describe('Button', () => {
         <Button color="#123" primary label="Test" onClick={() => {}} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
@@ -176,7 +175,7 @@ describe('Button', () => {
   });
 
   test('disabled', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Button disabled />
         <Button disabled primary label="Button" />
@@ -191,105 +190,105 @@ describe('Button', () => {
         <Button disabled icon={<svg />} label="Button" primary />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('active', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Button active label="Button" />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('active + primary', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Button active primary label="Button" />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('icon label', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Button icon={<svg />} label="Test" onClick={() => {}} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('reverse icon label', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Button reverse icon={<svg />} label="Test" onClick={() => {}} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('href', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Button href="test" />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('hoverIndicator background', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Button onClick={() => {}} hoverIndicator="background">
           hoverIndicator
         </Button>
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('hoverIndicator as object with color', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Button onClick={() => {}} hoverIndicator={{ color: 'brand' }}>
           hoverIndicator
         </Button>
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('hoverIndicator as object with invalid color', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Button onClick={() => {}} hoverIndicator={{ color: 'invalid' }}>
           hoverIndicator
         </Button>
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('hoverIndicator color', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Button onClick={() => {}} hoverIndicator="dark-3">
           hoverIndicator
         </Button>
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
@@ -308,7 +307,7 @@ describe('Button', () => {
   });
 
   test('size', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Button size="small" label="Small" />
         <Button size="medium" label="Medium" />
@@ -329,28 +328,28 @@ describe('Button', () => {
       </Grommet>,
     );
 
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('as', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Button as="span" />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('a11yTitle', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Button a11yTitle="Title" />
         <Button aria-label="Title" />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 import { cleanup, render, fireEvent } from '@testing-library/react';
 import { axe } from 'jest-axe';
@@ -24,93 +23,93 @@ describe('RangeSelector', () => {
   });
 
   test('basic', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <RangeSelector values={[20, 30]} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('color', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <RangeSelector color="accent-1" values={[20, 30]} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('direction', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <RangeSelector direction="horizontal" values={[20, 30]} />
         <RangeSelector direction="vertical" values={[20, 30]} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('invert', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <RangeSelector invert values={[20, 30]} />
         <RangeSelector invert={false} values={[20, 30]} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('max', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <RangeSelector max={50} values={[20, 30]} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('min', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <RangeSelector min={10} values={[20, 30]} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('opacity', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         {['weak', 'medium', 'strong'].map(opacity => (
           <RangeSelector key={opacity} opacity={opacity} values={[20, 30]} />
         ))}
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('round', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         {['xsmall', 'small', 'medium', 'large', 'full'].map(round => (
           <RangeSelector key={round} round={round} values={[20, 30]} />
         ))}
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('size', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         {[
           'xxsmall',
@@ -125,7 +124,7 @@ describe('RangeSelector', () => {
         ))}
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 

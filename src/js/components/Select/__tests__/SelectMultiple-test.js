@@ -1,6 +1,5 @@
 import React from 'react';
 import 'jest-styled-components';
-import renderer from 'react-test-renderer';
 import { act, cleanup, render, fireEvent } from '@testing-library/react';
 import { axe } from 'jest-axe';
 import 'jest-axe/extend-expect';
@@ -28,7 +27,7 @@ describe('Select Controlled', () => {
   });
 
   test('multiple', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Select
         id="test-select"
         multiple
@@ -37,7 +36,7 @@ describe('Select Controlled', () => {
         value={[]}
       />,
     );
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('multiple values', () => {

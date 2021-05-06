@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { cleanup, render, fireEvent } from '@testing-library/react';
 import 'jest-styled-components';
 
@@ -10,22 +9,22 @@ describe('WorldMap', () => {
   afterEach(cleanup);
 
   test('default', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <WorldMap />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('color', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <WorldMap color="brand" />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
@@ -132,7 +131,7 @@ describe('WorldMap', () => {
   });
 
   test('fill', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <WorldMap fill />
         <WorldMap fill={false} />
@@ -140,7 +139,7 @@ describe('WorldMap', () => {
         <WorldMap fill="vertical" />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 

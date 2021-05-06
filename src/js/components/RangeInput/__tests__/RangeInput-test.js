@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 import 'jest-axe/extend-expect';
 import 'regenerator-runtime/runtime';
@@ -25,44 +24,44 @@ describe('RangeInput', () => {
   });
 
   test('renders', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <RangeInput value="50" />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('track themed', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet theme={{ rangeInput: { track: { color: 'brand' } } }}>
         <RangeInput value="10" />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('track themed with color and opacity', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet
         theme={{ rangeInput: { track: { color: 'brand', opacity: 0.3 } } }}
       >
         <RangeInput value="10" />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('with min and max offset', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <RangeInput min={10} max={20} step={1} value={15} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 

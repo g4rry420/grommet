@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import 'jest-styled-components';
 
 import { findAllByType } from '../../../utils';
@@ -45,14 +46,14 @@ describe('RoutedButton', () => {
   test('renders', () => {
     console.warn = jest.fn();
     const warnSpy = jest.spyOn(console, 'warn');
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <FakeRouter replace={replace} push={push}>
           <RoutedButton label="Test" path="/" />
         </FakeRouter>
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
 
     expect(warnSpy).toBeCalledWith(warning);

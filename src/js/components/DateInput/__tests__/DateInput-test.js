@@ -1,6 +1,6 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import 'jest-styled-components';
+import renderer from 'react-test-renderer';
 import { cleanup, fireEvent, render } from '@testing-library/react';
 import { axe } from 'jest-axe';
 import 'jest-axe/extend-expect';
@@ -29,39 +29,39 @@ describe('DateInput', () => {
   });
 
   test('basic', () => {
-    const component = renderer.create(
+    const { container, unmount } = render(
       <Grommet>
         <DateInput id="item" name="item" value={DATE} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
-    component.unmount();
+    unmount();
   });
 
   test('format', () => {
-    const component = renderer.create(
+    const { container, unmount } = render(
       <Grommet>
         <DateInput id="item" name="item" format="mm/dd/yyyy" value={DATE} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
-    component.unmount();
+    unmount();
   });
 
   test('inline', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <DateInput id="item" name="item" inline value={DATE} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 
   test('format inline', () => {
-    const component = renderer.create(
+    const { container, unmount } = render(
       <Grommet>
         <DateInput
           id="item"
@@ -72,13 +72,13 @@ describe('DateInput', () => {
         />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
-    component.unmount();
+    unmount();
   });
 
   test('format disabled', () => {
-    const component = renderer.create(
+    const { container, unmount } = render(
       <Grommet>
         <DateInput
           id="item"
@@ -89,35 +89,35 @@ describe('DateInput', () => {
         />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
-    component.unmount();
+    unmount();
   });
 
   test('range', () => {
-    const component = renderer.create(
+    const { container, unmount } = render(
       <Grommet>
         <DateInput id="item" name="item" value={DATES} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
-    component.unmount();
+    unmount();
   });
 
   test('range inline', () => {
-    const component = renderer.create(
+    const { container, unmount } = render(
       <Grommet>
         <DateInput id="item" name="item" value={DATES} inline />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
-    component.unmount();
+    unmount();
   });
 
   test('range format', () => {
-    const component = renderer.create(
+    const { container, unmount } = render(
       <Grommet>
         <DateInput
           id="item"
@@ -127,13 +127,13 @@ describe('DateInput', () => {
         />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
-    component.unmount();
+    unmount();
   });
 
   test('range format inline', () => {
-    const component = renderer.create(
+    const { container, unmount } = render(
       <Grommet>
         <DateInput
           id="item"
@@ -144,9 +144,9 @@ describe('DateInput', () => {
         />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
-    component.unmount();
+    unmount();
   });
 
   test('dates initialized with empty array', () => {
@@ -358,13 +358,13 @@ describe('DateInput', () => {
   });
 
   test('disabled', () => {
-    const component = renderer.create(
+    const { container, unmount } = render(
       <Grommet>
         <DateInput disabled />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
-    component.unmount();
+    unmount();
   });
 });

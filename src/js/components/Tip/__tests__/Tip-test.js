@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { render, fireEvent, waitFor, cleanup } from '@testing-library/react';
 import { screen } from '@testing-library/dom';
 import 'jest-styled-components';
@@ -122,20 +121,20 @@ describe('Tip', () => {
   });
 
   test(`should work with a child that isn't a React Element`, () => {
-    const component = renderer.create(
+    const { container, unmount } = render(
       <Grommet>
         <Tip content="Hello">Not React Element</Tip>
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
-    component.unmount();
+    unmount();
   });
 
   test(`throw error with more than one child`, () => {
     console.error = jest.fn();
     expect(() => {
-      renderer.create(
+      render(
         <Grommet>
           <Tip>
             <Box>1</Box>
@@ -151,7 +150,7 @@ describe('Tip', () => {
   test(`throw error with more than one non React Element`, () => {
     console.error = jest.fn();
     expect(() => {
-      renderer.create(
+      render(
         <Grommet>
           <Tip>123 {false}</Tip>
         </Grommet>,

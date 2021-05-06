@@ -81,24 +81,16 @@ exports[`Button a11yTitle 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <button
     aria-label="Title"
-    className="c1"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c1"
     type="button"
   />
   <button
     aria-label="Title"
-    className="c1"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c1"
     type="button"
   />
 </div>
@@ -190,14 +182,10 @@ exports[`Button active + primary 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <button
-    className="c1"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c1"
     type="button"
   >
     Button
@@ -288,14 +276,10 @@ exports[`Button active 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <button
-    className="c1"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c1"
     type="button"
   >
     Button
@@ -384,14 +368,10 @@ exports[`Button as 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <span
-    className="c1"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c1"
     type="button"
   />
 </div>
@@ -478,15 +458,10 @@ exports[`Button basic 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <button
-    className="c1"
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c1"
     type="button"
   >
     Test
@@ -580,19 +555,14 @@ exports[`Button children function 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <button
-    className="c1"
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c1"
     type="button"
   >
     <span
-      className="c2"
+      class="c2"
     >
       Test
     </span>
@@ -753,35 +723,25 @@ exports[`Button children function with disabled prop 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <button
-    className="c1"
-    disabled={true}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c1"
+    disabled=""
     type="button"
   >
     <span
-      className="c2"
+      class="c2"
     >
       Disabled
     </span>
   </button>
   <button
-    className="c3"
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c3"
     type="button"
   >
     <span
-      className="c2"
+      class="c2"
     >
       Test
     </span>
@@ -1086,48 +1046,28 @@ exports[`Button color 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <button
-    className="c1"
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c1"
     type="button"
   >
     Test
   </button>
   <button
-    className="c2"
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c2"
     type="button"
   >
     Test
   </button>
   <button
-    className="c3"
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c3"
     type="button"
   >
     Test
   </button>
   <button
-    className="c4"
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c4"
     type="button"
   >
     Test
@@ -1568,149 +1508,105 @@ exports[`Button disabled 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <button
-    className="c1"
-    disabled={true}
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c1"
+    disabled=""
     type="button"
   />
   <button
-    className="c2"
-    disabled={true}
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c2"
+    disabled=""
     type="button"
   >
     Button
   </button>
   <button
-    className="c1"
-    disabled={true}
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c1"
+    disabled=""
     type="button"
   >
     Button
   </button>
   <button
-    className="c3"
-    disabled={true}
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c3"
+    disabled=""
     type="button"
   >
     Button
   </button>
   <button
-    className="c1"
-    disabled={true}
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c1"
+    disabled=""
     type="button"
   >
     Button
   </button>
   <button
-    className="c4"
-    disabled={true}
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c4"
+    disabled=""
     type="button"
   >
     <svg />
   </button>
   <button
-    className="c5"
-    disabled={true}
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c5"
+    disabled=""
     type="button"
   >
     <svg />
   </button>
   <button
-    className="c6"
-    disabled={true}
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c6"
+    disabled=""
     type="button"
   >
     <svg />
   </button>
   <button
-    className="c1"
-    disabled={true}
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c1"
+    disabled=""
     type="button"
   >
     <div
-      className="c7"
+      class="c7"
     >
       <svg />
       <div
-        className="c8"
+        class="c8"
       />
       Button
     </div>
   </button>
   <button
-    className="c3"
-    disabled={true}
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c3"
+    disabled=""
     type="button"
   >
     <div
-      className="c7"
+      class="c7"
     >
       <svg />
       <div
-        className="c8"
+        class="c8"
       />
       Button
     </div>
   </button>
   <button
-    className="c2"
-    disabled={true}
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c2"
+    disabled=""
     type="button"
   >
     <div
-      className="c7"
+      class="c7"
     >
       <svg
         color="#f8f8f8"
       />
       <div
-        className="c8"
+        class="c8"
       />
       Button
     </div>
@@ -2281,15 +2177,10 @@ exports[`Button hoverIndicator as object with color 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <button
-    className="c1"
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c1"
     type="button"
   >
     hoverIndicator
@@ -2372,15 +2263,10 @@ exports[`Button hoverIndicator as object with invalid color 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <button
-    className="c1"
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c1"
     type="button"
   >
     hoverIndicator
@@ -2463,15 +2349,10 @@ exports[`Button hoverIndicator background 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <button
-    className="c1"
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c1"
     type="button"
   >
     hoverIndicator
@@ -2554,15 +2435,10 @@ exports[`Button hoverIndicator color 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <button
-    className="c1"
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c1"
     type="button"
   >
     hoverIndicator
@@ -2651,15 +2527,11 @@ exports[`Button href 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <a
-    className="c1"
+    class="c1"
     href="test"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
   />
 </div>
 `;
@@ -2777,23 +2649,18 @@ exports[`Button icon label 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <button
-    className="c1"
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c1"
     type="button"
   >
     <div
-      className="c2"
+      class="c2"
     >
       <svg />
       <div
-        className="c3"
+        class="c3"
       />
       Test
     </div>
@@ -2885,15 +2752,10 @@ exports[`Button primary 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <button
-    className="c1"
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c1"
     type="button"
   >
     Test
@@ -3014,23 +2876,18 @@ exports[`Button reverse icon label 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <button
-    className="c1"
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c1"
     type="button"
   >
     <div
-      className="c2"
+      class="c2"
     >
       Test
       <div
-        className="c3"
+        class="c3"
       />
       <svg />
     </div>
@@ -3636,284 +3493,220 @@ exports[`Button size 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
   <button
-    className="c1"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c1"
     type="button"
   >
     Small
   </button>
   <button
-    className="c2"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c2"
     type="button"
   >
     Medium
   </button>
   <button
-    className="c2"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c2"
     type="button"
   >
     Default
   </button>
   <button
-    className="c3"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c3"
     type="button"
   >
     Large
   </button>
   <button
-    className="c4"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c4"
     type="button"
   >
     Small
   </button>
   <button
-    className="c5"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c5"
     type="button"
   >
     Medium
   </button>
   <button
-    className="c5"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c5"
     type="button"
   >
     Default
   </button>
   <button
-    className="c6"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c6"
     type="button"
   >
     Large
   </button>
   <button
-    className="c7"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c7"
     type="button"
   >
     <svg
       aria-label="Add"
-      className="c8"
+      class="c8"
       viewBox="0 0 24 24"
     >
       <path
         d="M12,22 L12,2 M2,12 L22,12"
         fill="none"
         stroke="#000"
-        strokeWidth="2"
+        stroke-width="2"
       />
     </svg>
   </button>
   <button
-    className="c7"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c7"
     type="button"
   >
     <svg
       aria-label="Add"
-      className="c8"
+      class="c8"
       viewBox="0 0 24 24"
     >
       <path
         d="M12,22 L12,2 M2,12 L22,12"
         fill="none"
         stroke="#000"
-        strokeWidth="2"
+        stroke-width="2"
       />
     </svg>
   </button>
   <button
-    className="c7"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c7"
     type="button"
   >
     <svg
       aria-label="Add"
-      className="c8"
+      class="c8"
       viewBox="0 0 24 24"
     >
       <path
         d="M12,22 L12,2 M2,12 L22,12"
         fill="none"
         stroke="#000"
-        strokeWidth="2"
+        stroke-width="2"
       />
     </svg>
   </button>
   <button
-    className="c7"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c7"
     type="button"
   >
     <svg
       aria-label="Add"
-      className="c8"
+      class="c8"
       viewBox="0 0 24 24"
     >
       <path
         d="M12,22 L12,2 M2,12 L22,12"
         fill="none"
         stroke="#000"
-        strokeWidth="2"
+        stroke-width="2"
       />
     </svg>
   </button>
   <button
-    className="c1"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c1"
     type="button"
   >
     <div
-      className="c9"
+      class="c9"
     >
       Small
       <div
-        className="c10"
+        class="c10"
       />
       <svg
         aria-label="Next"
-        className="c11"
+        class="c11"
         viewBox="0 0 24 24"
       >
         <polyline
           fill="none"
           points="7 2 17 12 7 22"
           stroke="#000"
-          strokeWidth="2"
+          stroke-width="2"
         />
       </svg>
     </div>
   </button>
   <button
-    className="c2"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c2"
     type="button"
   >
     <div
-      className="c9"
+      class="c9"
     >
       Medium
       <div
-        className="c10"
+        class="c10"
       />
       <svg
         aria-label="Next"
-        className="c11"
+        class="c11"
         viewBox="0 0 24 24"
       >
         <polyline
           fill="none"
           points="7 2 17 12 7 22"
           stroke="#000"
-          strokeWidth="2"
+          stroke-width="2"
         />
       </svg>
     </div>
   </button>
   <button
-    className="c2"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c2"
     type="button"
   >
     <div
-      className="c9"
+      class="c9"
     >
       Default
       <div
-        className="c10"
+        class="c10"
       />
       <svg
         aria-label="Next"
-        className="c11"
+        class="c11"
         viewBox="0 0 24 24"
       >
         <polyline
           fill="none"
           points="7 2 17 12 7 22"
           stroke="#000"
-          strokeWidth="2"
+          stroke-width="2"
         />
       </svg>
     </div>
   </button>
   <button
-    className="c3"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    class="c3"
     type="button"
   >
     <div
-      className="c9"
+      class="c9"
     >
       Large
       <div
-        className="c10"
+        class="c10"
       />
       <svg
         aria-label="Next"
-        className="c11"
+        class="c11"
         viewBox="0 0 24 24"
       >
         <polyline
           fill="none"
           points="7 2 17 12 7 22"
           stroke="#000"
-          strokeWidth="2"
+          stroke-width="2"
         />
       </svg>
     </div>
