@@ -155,12 +155,12 @@ describe('Meter', () => {
   });
 
   test('vertical', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Grommet>
         <Meter direction="vertical" values={VALUES} />
       </Grommet>,
     );
-    const tree = component.toJSON();
+    const tree = container.firstChild;
     expect(tree).toMatchSnapshot();
   });
 });
